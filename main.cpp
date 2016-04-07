@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -8,8 +9,8 @@ using namespace std;
  * eq: |=> n^i=n^i-1(n) <-> i>0
  * -eq: |=> n^i=n^i-1/(n) <-> i<0
  */
-float pow(float n, float i){
-    float p = 1;
+int64_t pow(int64_t n, int64_t i) {
+    int64_t p = 1;
     if (i != 0) {
         if (i < 0){
             p = pow(n, i+1);
@@ -27,10 +28,9 @@ float pow(float n, float i){
 }
 
 int main() {
-    cout << pow(3, 3) << endl;
-    /*system("PAUSE");
-    return EXIT_SUCCESS;*/
-    return 0;
+    cout << pow(2, 31) << endl;
+    //system("PAUSE");
+    return EXIT_SUCCESS;
 }
 
 
